@@ -21,7 +21,7 @@ public class SignUpTest extends BaseTest{
         signUpPage.enterName("Mina")
                 .enterEmail("mina@email.com")
                 .clickSignUpButton()
-                .chooseGender()
+                .chooseGender("Mr")
                 .enterPassword("1234")
                 .chooseDay("15")
                 .chooseMonth("June")

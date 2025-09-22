@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import utils.commonHelper.ElementHelper;
 
 public class SignInPage {
     WebDriver driver;
@@ -15,17 +16,17 @@ public class SignInPage {
     }
 
     public SignInPage enterLoginEmail(String email){
-        driver.findElement(loginEmail).sendKeys(email);
+        ElementHelper.sendText(driver, loginEmail, email);
         return this;
     }
 
     public SignInPage enterLoginPassword(String password){
-        driver.findElement(loginPassword).sendKeys(password);
+        ElementHelper.sendText(driver, loginPassword, password);
         return this;
     }
 
     public SignInPage clickLoginButton(){
-        driver.findElement(loginButton).click();
+        ElementHelper.click(driver, loginButton);
         return this;
     }
 }
