@@ -11,6 +11,8 @@ import java.time.Duration;
 public class WaitHelper {
     private static final int duration = 10;
 
+    private WaitHelper() {}   // Private Constructor to stop instantiation
+
     public static WebElement waitForVisibility(WebDriver driver, By locator) {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));

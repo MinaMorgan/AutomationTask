@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
 public class ElementHelper {
+    private ElementHelper() {}   // Private Constructor to stop instantiation
+
     public static void click(WebDriver driver, By locator) {
         WaitHelper.waitForVisibility(driver, locator).click();
     }
