@@ -18,22 +18,22 @@ public class SignUpTest extends BaseTest{
     public void signUpTest()
     {
         homePage.clickSignInUp();
-        signUpPage.enterName("Mina")
-                .enterEmail("mina@email.com")
+        signUpPage.enterName()
+                .enterEmail()
                 .clickSignUpButton()
                 .chooseGender("Mr")
-                .enterPassword("1234")
+                .enterPassword()
                 .chooseDay("15")
                 .chooseMonth("June")
                 .chooseYear("2020")
                 .enterFirstName("Mina")
                 .enterLastName("Morgan")
-                .enterAddress1("Earth")
+                .enterAddress1()
                 .chooseCountry("United States")
                 .enterState("CA")
-                .enterCity("Los Angeles")
-                .enterZipcode("12345")
-                .enterMobileNumber("0666666")
+                .enterCity()
+                .enterZipcode()
+                .enterMobileNumber()
                 .clickCreateAccountButton();
     }
 }

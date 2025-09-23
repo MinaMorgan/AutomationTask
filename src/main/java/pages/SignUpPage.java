@@ -3,9 +3,11 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.commonHelper.ElementHelper;
+import utils.commonHelper.Global;
 
 public class SignUpPage {
     WebDriver driver;
+    Global global;
 
     By signUpName = By.xpath("//input[@data-qa='signup-name']");
     By signUpEmail = By.xpath("//input[@data-qa='signup-email']");
@@ -27,17 +29,20 @@ public class SignUpPage {
 
     public SignUpPage(WebDriver driver) {
         this.driver = driver;
+        this.global = Global.getGlobal();
     }
 
-    public SignUpPage enterName(String name)
+    public SignUpPage enterName()
     {
-        ElementHelper.sendText(driver, signUpName, name);
+        global.setName();
+        ElementHelper.sendText(driver, signUpName, global.getName());
         return this;
     }
 
-    public SignUpPage enterEmail(String email)
+    public SignUpPage enterEmail()
     {
-        ElementHelper.sendText(driver, signUpEmail, email);
+        global.setEmail();
+        ElementHelper.sendText(driver, signUpEmail, global.getEmail());
         return this;
     }
 
@@ -53,9 +58,10 @@ public class SignUpPage {
         return this;
     }
 
-    public SignUpPage enterPassword(String password)
+    public SignUpPage enterPassword()
     {
-        ElementHelper.sendText(driver, signUpPassword, password);
+        global.setPassword();
+        ElementHelper.sendText(driver, signUpPassword, global.getPassword());
         return this;
     }
 
@@ -86,9 +92,10 @@ public class SignUpPage {
         return this;
     }
 
-    public SignUpPage enterAddress1(String address)
+    public SignUpPage enterAddress1()
     {
-        ElementHelper.sendText(driver, address1, address);
+        global.setAddress();
+        ElementHelper.sendText(driver, address1, global.getAddress());
         return this;
     }
 
@@ -104,19 +111,22 @@ public class SignUpPage {
         return this;
     }
 
-    public SignUpPage enterCity(String city)
+    public SignUpPage enterCity()
     {
-        ElementHelper.sendText(driver, this.city, city);
+        global.setCity();
+        ElementHelper.sendText(driver, this.city, global.getCity());
         return this;
     }
 
-    public SignUpPage enterZipcode(String zipcode){
-        ElementHelper.sendText(driver, this.zipcode, zipcode);
+    public SignUpPage enterZipcode(){
+        global.setZipcode();
+        ElementHelper.sendText(driver, this.zipcode, global.getZipcode());
         return this;
     }
 
-    public SignUpPage enterMobileNumber(String mobileNumber){
-        ElementHelper.sendText(driver, this.mobileNumber, mobileNumber);
+    public SignUpPage enterMobileNumber(){
+        global.setMobileNumber();
+        ElementHelper.sendText(driver, this.mobileNumber, global.getMobileNumber());
         return this;
     }
 
