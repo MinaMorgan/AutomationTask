@@ -2,6 +2,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.SignInPage;
+import utils.driverMange.DriverManager;
 
 public class SignInTest extends BaseTest{
     HomePage homePage;
@@ -14,7 +15,7 @@ public class SignInTest extends BaseTest{
     }
 
     @Test
-    public void signInTest(){
+    public void signIn(){
         homePage.clickSignInUp();
         signInPage.enterLoginEmail("mina@email.com")
                 .enterLoginPassword("1234")

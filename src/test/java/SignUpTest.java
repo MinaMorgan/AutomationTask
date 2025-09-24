@@ -2,6 +2,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.SignUpPage;
+import utils.driverMange.DriverManager;
 
 public class SignUpTest extends BaseTest{
     HomePage homePage;
@@ -15,7 +16,7 @@ public class SignUpTest extends BaseTest{
     }
 
     @Test
-    public void signUpTest()
+    public void signUp()
     {
         homePage.clickSignInUp();
         signUpPage.enterName()
