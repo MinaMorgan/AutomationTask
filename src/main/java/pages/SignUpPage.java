@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 import utils.commonHelper.ElementHelper;
 import utils.commonHelper.Global;
 import utils.driverMange.DriverManager;
@@ -27,16 +28,14 @@ public class SignUpPage {
     By mobileNumber = By.id("mobile_number");
     By createAccountButton = By.xpath("//button[@data-qa='create-account']");
 
-
     public SignUpPage() {
         this.driver = DriverManager.getDriver();
         this.global = Global.getGlobal();
     }
 
-    public SignUpPage enterName()
+    public SignUpPage enterName(String name)
     {
-        global.setName();
-        ElementHelper.sendText(driver, signUpName, global.getName());
+        ElementHelper.sendText(driver, signUpName, name);
         return this;
     }
 
@@ -93,10 +92,9 @@ public class SignUpPage {
         return this;
     }
 
-    public SignUpPage enterAddress1()
+    public SignUpPage enterAddress1(String address)
     {
-        global.setAddress();
-        ElementHelper.sendText(driver, address1, global.getAddress());
+        ElementHelper.sendText(driver, address1, address);
         return this;
     }
 
@@ -112,22 +110,19 @@ public class SignUpPage {
         return this;
     }
 
-    public SignUpPage enterCity()
+    public SignUpPage enterCity(String city)
     {
-        global.setCity();
-        ElementHelper.sendText(driver, this.city, global.getCity());
+        ElementHelper.sendText(driver, this.city, city);
         return this;
     }
 
-    public SignUpPage enterZipcode(){
-        global.setZipcode();
-        ElementHelper.sendText(driver, this.zipcode, global.getZipcode());
+    public SignUpPage enterZipcode(String zipcode){
+        ElementHelper.sendText(driver, this.zipcode, zipcode);
         return this;
     }
 
-    public SignUpPage enterMobileNumber(){
-        global.setMobileNumber();
-        ElementHelper.sendText(driver, this.mobileNumber, global.getMobileNumber());
+    public SignUpPage enterMobileNumber(String mobileNumber){
+        ElementHelper.sendText(driver, this.mobileNumber, mobileNumber);
         return this;
     }
 
