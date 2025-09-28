@@ -1,4 +1,4 @@
-package utilities.datareaders;
+package utils.datareaders;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

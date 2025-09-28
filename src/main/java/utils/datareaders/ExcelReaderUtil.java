@@ -1,4 +1,4 @@
-package utilities.datareaders;
+package utils.datareaders;
 
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
@@ -10,7 +10,6 @@ import java.util.Iterator;
 import java.util.List;
 
 public class ExcelReaderUtil {
-
     public static Iterator<Object[]> readExcel(String filePath) throws IOException {
         List<Object[]> data = new ArrayList<>();
         try (FileInputStream fis = new FileInputStream(filePath);

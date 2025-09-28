@@ -1,4 +1,4 @@
-package utilities.datareaders;
+package utils.datareaders;
 
 import java.io.IOException;
 import java.util.Iterator;

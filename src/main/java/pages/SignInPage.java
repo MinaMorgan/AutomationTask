@@ -2,15 +2,14 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 import utils.commonHelper.ElementHelper;
 import utils.commonHelper.Global;
 import utils.driverMange.DriverManager;
 
-
 public class SignInPage {
     WebDriver driver;
     Global global;
-
 
     By loginEmail = By.xpath("//input[@data-qa='login-email']");
     By loginPassword = By.xpath("//input[@data-qa='login-password']");

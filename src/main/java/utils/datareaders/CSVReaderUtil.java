@@ -1,4 +1,4 @@
-package utilities.datareaders;
+package utils.datareaders;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
