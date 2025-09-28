@@ -1,14 +1,14 @@
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import utils.driverMange.DriverManager;
 
 public class BaseTest {
-    @BeforeTest
+    @BeforeClass
     public void Init() {
-        DriverManager.setupDriver();
+        DriverManager.getDriver();
     }
 
-    @AfterTest
+    @AfterClass
     public void teardown() {
         DriverManager.closeDriver();
     }

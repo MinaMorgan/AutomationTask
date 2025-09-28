@@ -1,18 +1,17 @@
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.SignUpPage;
-import utils.driverMange.DriverManager;
 
 public class SignUpTest extends BaseTest{
     HomePage homePage;
     SignUpPage signUpPage;
 
-    @BeforeTest
+    @BeforeMethod
     public void setUp()
     {
-        homePage = new HomePage(DriverManager.getDriver());
-        signUpPage = new SignUpPage(DriverManager.getDriver());
+        homePage = new HomePage();
+        signUpPage = new SignUpPage();
     }
 
     @Test

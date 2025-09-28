@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import utils.commonHelper.ElementHelper;
 import utils.commonHelper.Global;
+import utils.driverMange.DriverManager;
 
 public class SignUpPage {
     WebDriver driver;
@@ -27,8 +28,8 @@ public class SignUpPage {
     By createAccountButton = By.xpath("//button[@data-qa='create-account']");
 
 
-    public SignUpPage(WebDriver driver) {
-        this.driver = driver;
+    public SignUpPage() {
+        this.driver = DriverManager.getDriver();
         this.global = Global.getGlobal();
     }
 

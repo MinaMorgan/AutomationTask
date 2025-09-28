@@ -1,24 +1,23 @@
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import pages.HomePage;
 import pages.SignInPage;
-import utils.driverMange.DriverManager;
 
 public class SignInTest extends BaseTest{
     HomePage homePage;
     SignInPage signInPage;
 
-    @BeforeTest
+    @BeforeMethod
     public void setup() {
-        homePage = new HomePage(DriverManager.getDriver());
-        signInPage = new SignInPage(DriverManager.getDriver());
+        homePage = new HomePage();
+        signInPage = new SignInPage();
     }
 
     @Test
     public void signIn(){
         homePage.clickSignInUp();
-        signInPage.enterLoginEmail("mina@email.com")
-                .enterLoginPassword("1234")
+        signInPage.enterLoginEmail()
+                .enterLoginPassword()
                 .clickLoginButton();
     }
 }

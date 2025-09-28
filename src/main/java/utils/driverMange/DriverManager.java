@@ -10,13 +10,13 @@ import utils.config.LoadProperties;
 import java.time.Duration;
 
 public class DriverManager {
-    static WebDriver driver;
-    static String browser = LoadProperties.BROWSER;
-    static String baseUrl = LoadProperties.URL;
+    private static WebDriver driver;
+    private static final String browser = LoadProperties.BROWSER;
+    private static final String baseUrl = LoadProperties.URL;
 
     private DriverManager() {}
 
-    public static void setupDriver() {
+    private static void setupDriver() {
         switch (browser.toLowerCase()) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
@@ -44,6 +44,9 @@ public class DriverManager {
     }
 
     public static void closeDriver(){
-        driver.quit();
+        if(driver != null) {
+            driver.quit();
+            driver = null;
+        }
     }
 }
